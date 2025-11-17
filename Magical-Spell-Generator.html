@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Magical Spell Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Welcome to the Magical Spell Generator!</h1>
+
+<div id="spellArea">Your spell will appear here...</div>
+
+<center>
+    <button id="generateButton">Generate Spell</button>
+    <button id="resetButton">Reset</button>
+    <button id="clearHistoryButton">Clear History</button>
+</center>
+
+<ul id="ingredientsList" style="display:none;">
+    <li>Dragon Scale</li>
+    <li>Phoenix Feather</li>
+    <li>Unicorn Horn</li>
+    <li>Starlight Shard</li>
+    <li>Dragon Heartfire</li>
+    <li>Unicorn Soul</li>
+    <li>Mermaid's Tear</li>
+    <li>Orge's Tooth</li>
+    <li>Rat's Tail</li>
+    <li>Serpent's Fang</li>
+</ul>
+
+<ul id="rareList" style="display:none;">
+    <li>Starlight Essence</li>
+    <li>Elder Dragon Heartfire</li>
+    <li>Celestial Phoenix Aura</li>
+    <li>Timeless Unicorn Soul</li>
+</ul>
+
+<div id="customIngredients">
+    <h2>Create Your Own Ingredients</h2>
+
+    <input type="text" id="ingredientInput" placeholder="Enter an ingredient">
+    <button id="addIngredientButton">Add Ingredient</button>
+
+    <h3>Select Ingredients to Combine</h3>
+    <ul id="userIngredientList"></ul>
+
+    <button id="combineSpellButton">Combine Spell</button>
+</div>
+
+<h2>Spell History</h2>
+<div id="history"></div>
+
+<audio id="sparkSound" src="https://cdn.pixabay.com/audio/2022/03/30/audio_efa3a9df5d.mp3"></audio>
+<audio id="drumSound" src="https://cdn.pixabay.com/audio/2022/03/15/audio_0e3fcc4c92.mp3"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>
+

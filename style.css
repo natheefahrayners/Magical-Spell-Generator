@@ -1,0 +1,127 @@
+body {
+    font-family: 'Papyrus', fantasy;
+    background: linear-gradient(120deg, #3b005f, #0e144a);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    color: white;
+    padding: 20px;
+}
+
+@keyframes gradientShift {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
+h1 {
+    text-align: center;
+    text-shadow: 0 0 12px #ffb2ff;
+}
+
+#spellArea {
+    width: 400px;
+    min-height: 150px;
+    margin: 20px auto;
+    border: 3px solid #fff;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    text-align: center;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+.fade-in {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.glow {
+    animation: glowPulse 2s infinite alternate;
+}
+
+@keyframes glowPulse {
+    from {box-shadow: 0 0 10px #fff;}
+    to {box-shadow: 0 0 30px #ff60ff;}
+}
+
+.sparkle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+    animation: sparkleFloat 1.5s linear infinite;
+    opacity: 0.8;
+}
+
+@keyframes sparkleFloat {
+    from {transform: translateY(20px) scale(1);}
+    to {transform: translateY(-80px) scale(0);}
+}
+
+button {
+    padding: 10px 16px;
+    font-size: 1em;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+#history {
+    margin-top: 30px;
+}
+
+.spell-card {
+    border: 2px solid #fff;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    animation: fadeIn 0.6s ease;
+}
+
+.legendary {
+    border-color: gold;
+    box-shadow: 0 0 15px gold;
+    color: gold;
+}
+
+#customIngredients {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#customIngredients input {
+    padding: 8px;
+    width: 200px;
+    border-radius: 6px;
+    border: none;
+    margin-right: 10px;
+}
+
+#userIngredientList li {
+    list-style: none;
+    background: rgba(255,255,255,0.2);
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#userIngredientList li.selected {
+    background: gold;
+    color: black;
+    font-weight: bold;
+}
